@@ -220,7 +220,7 @@ class Player(Entity):
     def __init__(self, cordinate, health, stamina, facing, attackdamage):
         super().__init__(cordinate, health, stamina, facing)
         self.attack_damage = attackdamage
-        
+        self.distance_from_home = 0
    
     def heal(self):
         try:
