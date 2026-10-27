@@ -68,16 +68,16 @@ class Entity(ABC):
         if self.stamina > 0:
             if self.facing == "south":
                 self.cordinate[2] -= 1
-                self.distance_from_home += 1
+                
             elif self.facing == "north":
                 self.cordinate[2] += 1
-                self.distance_from_home += 1
+                
             elif self.facing == "east":
                 self.cordinate[0] += 1
-                self.distance_from_home += 1
+                
             elif self.facing == "west":
                 self.cordinate[0] -= 1
-                self.distance_from_home += 1
+                
 
                 print("moving forward")                    
             try:
@@ -89,16 +89,16 @@ class Entity(ABC):
         if self.stamina > 0:
             if self.facing == "south":
                 self.cordinate[2] += 1
-                self.distance_from_home += 1
+                
             elif self.facing == "north":
                 self.cordinate[2] -= 1
-                self.distance_from_home += 1
+                
             elif self.facing == "east":
                 self.cordinate[0] -= 1
-                self.distance_from_home += 1
+                
             elif self.facing == "west":
                 self.cordinate[0] += 1
-                self.distance_from_home += 1
+                
                                                         
             print("moving backward")
             try:
@@ -220,7 +220,7 @@ class Player(Entity):
     def __init__(self, cordinate, health, stamina, facing, attackdamage):
         super().__init__(cordinate, health, stamina, facing)
         self.attack_damage = attackdamage
-        self.distance_from_home = 0
+        
    
     def heal(self):
         try:
